@@ -1,5 +1,5 @@
 {
-  "name": "twentyfour",
+  "name": "react-scroll-datepicker",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss": "^8.4.38",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.5.13",
@@ -29,7 +27,6 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
   }
 }

@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Reddit+Mono:wght@200..900&display=swap');
+
 .scrollb::-webkit-scrollbar {
   display: none;
+}
+body {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.b {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(17, 24, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.cell {
+  display: flex;
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: white;
+  border-radius: 1.5rem;
+  position: relative;
+  align-items: center;
+  width: fit-content;
+}
+.list {
+  color: white;
+  overflow-y: scroll;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.listItems {
+  padding: 15px;
+  list-style-type: none;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list li:hover {
+  background-color: pink;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import "./index.css"
-import YearWheel from './components/YearWheel.jsx';
+import "./App.css"
+import YearPicker from './components/YearPicker.jsx';
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-gray-900">
-      <YearWheel />
+    <div className="b">
+      <YearPicker height={400}/>
     </div>
   )
 }
