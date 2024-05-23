@@ -34,6 +34,7 @@ body {
   position: relative;
   align-items: center;
   width: fit-content;
+  background-color: rgba(192, 192, 192, 0.1);
 }
 .list {
   color: white;
@@ -52,5 +53,5 @@ body {
   justify-content: center;
 }
 .list li:hover {
-  background-color: pink;
+  background-color: rgb(249 168 212);
 }

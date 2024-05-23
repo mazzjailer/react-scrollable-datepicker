@@ -44,9 +44,7 @@ const YearPicker = (props) => {
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-         {years.map((year) => <li ref={year.id === id ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle,
-          backgroundColor: year.name === selectedYear ? "rgb(249 168 212)" : "initial"
-         }}>{year.name}</li>)}
+         {years.map((year) => <li ref={year.id === id ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle}}>{year.name}</li>)}
         </ol>
       </nav>
     </div>

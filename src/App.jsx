@@ -1,11 +1,10 @@
 import React from 'react';
 import "./App.css"
-import YearPicker from './components/YearPicker.jsx';
-
+import DatePicker from './components/DatePicker.jsx';
 const App = () => {
   return (
     <div className="b">
-      <YearPicker height={400}/>
+      <DatePicker height={400}/>
     </div>
   )
 }
