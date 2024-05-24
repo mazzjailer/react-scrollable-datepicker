@@ -1,13 +1,16 @@
 import React from 'react'
 import YearPicker from './YearPicker.jsx';
 import MonthPicker from './MonthPicker.jsx';
+import DayPicker from './DayPicker.jsx';
+import '../App.css'
 
 const DatePicker = (props) => {
   return (
-    <>
-      <YearPicker height={props.height}/>
-      <MonthPicker height={props.height}/>
-    </>
+    <div className='b'>
+      <div className='container'>
+        <YearPicker height={props.height} size={props.size}/>
+      </div>
+    </div>
   )
 }
 

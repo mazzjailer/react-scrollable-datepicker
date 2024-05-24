@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect, useRef} from 'react'
 import "../App.css"
+import MonthPicker from './MonthPicker';
 
 const YearPicker = (props) => {
   const height = props.height;
@@ -8,7 +9,7 @@ const YearPicker = (props) => {
   const olPadding = cellHeight * 2.5 - cellHeight / 2;
   const year = new Date().getFullYear();
   const years = [];
-  const [id, setId] = useState("year");
+  const [YearId, setId] = useState(year.id);
   const [selectedYear, setSelectedYear] = useState(year);
   const ref = useRef("");
   for (let i = 0; i < 100; i++) {
@@ -40,14 +41,15 @@ const YearPicker = (props) => {
   }
   return (
     <>
-    <div className='container'>
+
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-         {years.map((year) => <li ref={year.id === id ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle}}>{year.name}</li>)}
+         {years.map((year) => <li ref={year.id === YearId ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{year.name}</li>)}
         </ol>
       </nav>
-    </div>
+      <MonthPicker syear={selectedYear} height={props.height} size={props.size}/>
+
     </>
   )
 }
