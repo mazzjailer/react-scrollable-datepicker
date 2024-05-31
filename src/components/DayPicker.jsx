@@ -11,9 +11,8 @@ const DayPicker = (props) => {
   for (let i = 1; i <= daysCount; i++) {
     days.push({id: i, name: i});
   }
-  const currentDay = days[new Date().getDate() - 1];
-  const [DayId, setId] = useState(currentDay.id);
-  const [selectedDay, setSelectedDay] = useState(currentDay.name);
+  const [dayId, setId] = useState();
+  const [selectedDay, setSelectedDay] = useState();
   const ref = useRef("");
   const handleClick = (day) => {
     setSelectedDay(day.name);
@@ -47,7 +46,7 @@ const DayPicker = (props) => {
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-         {days.map((day) => <li ref={day.id === DayId ? ref : null} key={day.id} onClick={() => {handleClick(day)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{day.name}</li>)}
+         {days.map((day) => <li ref={day.id === dayId ? ref : null} key={day.id} onClick={() => {handleClick(day)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{day.name}</li>)}
         </ol>
       </nav>
     </>
