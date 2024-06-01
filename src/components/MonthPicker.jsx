@@ -22,12 +22,11 @@ const MonthPicker = (props) => {
     { id: 12, name: "December" }
   ];
   const currentMonth = months[new Date().getMonth()];
-  const [monthId, setmonthId] = useState(currentMonth.id);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth.name);
   const ref = useRef("");
   const handleClick = (month) => {
     setSelectedMonth(month.name);
-    setmonthId(month.id);
+    props.setMonthId(month.id);
   }
   useEffect(() => {
     if (ref.current) {
@@ -54,10 +53,9 @@ const MonthPicker = (props) => {
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-          {months.map((month) => <li ref={month.id === monthId ? ref : null} key={month.id} onClick={() => {handleClick(month)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{month.name}</li>)}
+          {months.map((month) => <li ref={month.id === props.monthId ? ref : null} key={month.id} onClick={() => {handleClick(month)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{month.name}</li>)}
         </ol>
       </nav>
-      <DayPicker smonth={monthId} syear={props.syear} height={props.height} size={props.size}/>
     </>
   )
 }

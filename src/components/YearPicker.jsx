@@ -10,13 +10,12 @@ const YearPicker = (props) => {
   const year = new Date().getFullYear();
   const years = [];
   const [yearId, setId] = useState(year.id);
-  const [selectedYear, setSelectedYear] = useState(year);
   const ref = useRef("");
   for (let i = 0; i < 100; i++) {
     years.push({id: year - i, name: year - i});
   }
   const handleClick = (year) => {
-    setSelectedYear(year.name);
+    props.setYear(year.name);
     setId(year.id);
   }
   useEffect(() => {
@@ -28,7 +27,7 @@ const YearPicker = (props) => {
         top: 40
       });
     }
-  }, [selectedYear, ref]);
+  }, [props.selectedYear, ref]);
   const listItemsStyle = {
     height: cellHeight + "px",
   }
@@ -41,15 +40,12 @@ const YearPicker = (props) => {
   }
   return (
     <>
-
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
          {years.map((year) => <li ref={year.id === yearId ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{year.name}</li>)}
         </ol>
       </nav>
-      <MonthPicker syear={selectedYear} height={props.height} size={props.size}/>
-
     </>
   )
 }

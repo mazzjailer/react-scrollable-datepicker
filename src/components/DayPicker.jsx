@@ -12,10 +12,9 @@ const DayPicker = (props) => {
     days.push({id: i, name: i});
   }
   const [dayId, setId] = useState();
-  const [selectedDay, setSelectedDay] = useState();
   const ref = useRef("");
   const handleClick = (day) => {
-    setSelectedDay(day.name);
+    props.setDay(day.name);
     setId(day.id);
   }
   useEffect(() => {
@@ -27,7 +26,7 @@ const DayPicker = (props) => {
         top: 40
       });
     }
-  }, [selectedDay, ref]);
+  }, [props.selectedDay, ref]);
   const listItemsStyle = {
     height: cellHeight + "px",
   }
