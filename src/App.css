@@ -12,7 +12,7 @@ body {
 .b {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(17, 24, 39);
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ body {
   display: flex;
   outline-width: 4px;
   outline-style: solid;
-  outline-color: white;
+  outline-color: black;
   border-radius: 1.5rem;
   position: relative;
   align-items: center;
@@ -39,7 +39,7 @@ body {
   margin: 10px;
 }
 .list {
-  color: white;
+  color: black;
   overflow-y: scroll;
   line-height: 1;
   margin: 0;
