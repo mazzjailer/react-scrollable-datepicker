@@ -36,6 +36,13 @@ const DayPicker = (props) => {
   }
   const cellStyle = {
     height: cellHeight + "px",
+    backgroundColor: props.cellColor,
+    outlineColor: props.isDarkMode ? "white" : null,
+  }
+  const itemsStyle = {
+    ...listItemsStyle,
+    fontSize: props.size,
+    color: props.isDarkMode ? "white" : null
   }
   function daysInMonth (month, year) {
     return new Date(year, month, 0).getDate();
@@ -45,7 +52,7 @@ const DayPicker = (props) => {
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-         {days.map((day) => <li ref={day.id === dayId ? ref : null} key={day.id} onClick={() => {handleClick(day)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{day.name}</li>)}
+         {days.map((day) => <li ref={day.id === dayId ? ref : null} key={day.id} onClick={() => {handleClick(day)}} className= 'listItems' style={itemsStyle}>{day.name}</li>)}
         </ol>
       </nav>
     </>

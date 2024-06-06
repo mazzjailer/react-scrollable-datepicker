@@ -47,13 +47,20 @@ const MonthPicker = (props) => {
   }
   const cellStyle = {
     height: cellHeight + "px",
+    backgroundColor: props.cellColor,
+    outlineColor: props.isDarkMode ? "white" : null,
+  }
+  const itemsStyle = {
+    ...listItemsStyle,
+    fontSize: props.size,
+    color: props.isDarkMode ? "white" : null
   }
   return (
     <>
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-          {months.map((month) => <li ref={month.id === props.monthId ? ref : null} key={month.id} onClick={() => {handleClick(month)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{month.name}</li>)}
+          {months.map((month) => <li ref={month.id === props.monthId ? ref : null} key={month.id} onClick={() => {handleClick(month)}} className= 'listItems' style={itemsStyle}>{month.name}</li>)}
         </ol>
       </nav>
     </>

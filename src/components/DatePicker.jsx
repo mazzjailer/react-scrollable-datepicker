@@ -21,9 +21,9 @@ const DatePicker = (props) => {
   })
   return (
     <div className='dateContainer' style={{height: props.height}}>
-      <YearPicker setYear={setSelectedYear} selectedYear={selectedYear} height={props.height} size={props.size}/>
-      <MonthPicker setMonthId={setMonthId} monthId={monthId} syear={selectedYear} height={props.height} size={props.size}/>
-      <DayPicker setDay={setSelectedDay} selectedDay={selectedDay} smonth={monthId} syear={selectedYear} height={props.height} size={props.size}/>
+      <YearPicker setYear={setSelectedYear} selectedYear={selectedYear} height={props.height} size={props.size} cellColor={props.cellColor} isDarkMode={props.isDarkMode}/>
+      <MonthPicker setMonthId={setMonthId} monthId={monthId} syear={selectedYear} height={props.height} size={props.size} cellColor={props.cellColor} isDarkMode={props.isDarkMode}/>
+      <DayPicker setDay={setSelectedDay} selectedDay={selectedDay} smonth={monthId} syear={selectedYear} height={props.height} size={props.size} cellColor={props.cellColor} isDarkMode={props.isDarkMode}/>
     </div>
   )
 }

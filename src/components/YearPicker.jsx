@@ -37,13 +37,20 @@ const YearPicker = (props) => {
   }
   const cellStyle = {
     height: cellHeight + "px",
+    backgroundColor: props.cellColor,
+    outlineColor: props.isDarkMode ? "white" : null,
+  }
+  const itemsStyle = {
+    ...listItemsStyle,
+    fontSize: props.size,
+    color: props.isDarkMode ? "white" : null
   }
   return (
     <>
       <nav className='cell' style={cellStyle}>
         <ol className='list scrollb' 
          style={listStyle}>
-         {years.map((year) => <li ref={year.id === yearId ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={{...listItemsStyle, fontSize: props.size}}>{year.name}</li>)}
+         {years.map((year) => <li ref={year.id === yearId ? ref : null} key={year.id} onClick={() => {handleClick(year)}} className= 'listItems' style={itemsStyle}>{year.name}</li>)}
         </ol>
       </nav>
     </>
