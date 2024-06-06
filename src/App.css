@@ -17,11 +17,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-.container {
+.dateContainer {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  width: 100%;
+  width: auto;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -42,6 +42,7 @@ body {
   color: white;
   overflow-y: scroll;
   line-height: 1;
+  margin: 0;
 }
 .listItems {
   padding: 15px;

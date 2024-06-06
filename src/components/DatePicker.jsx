@@ -20,12 +20,10 @@ const DatePicker = (props) => {
     props.setDate(`${selectedYear}-${numFixer(monthId)}-${numFixer(selectedDay)}`);
   })
   return (
-    <div className='b'>
-      <div className='container'>
-        <YearPicker setYear={setSelectedYear} selectedYear={selectedYear} height={props.height} size={props.size}/>
-        <MonthPicker setMonthId={setMonthId} monthId={monthId} syear={selectedYear} height={props.height} size={props.size}/>
-        <DayPicker setDay={setSelectedDay} selectedDay={selectedDay} smonth={monthId} syear={selectedYear} height={props.height} size={props.size}/>
-      </div>
+    <div className='dateContainer' style={{height: props.height}}>
+      <YearPicker setYear={setSelectedYear} selectedYear={selectedYear} height={props.height} size={props.size}/>
+      <MonthPicker setMonthId={setMonthId} monthId={monthId} syear={selectedYear} height={props.height} size={props.size}/>
+      <DayPicker setDay={setSelectedDay} selectedDay={selectedDay} smonth={monthId} syear={selectedYear} height={props.height} size={props.size}/>
     </div>
   )
 }
