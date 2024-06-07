@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react'
-import "./App.css"
+import './index.css'
 import DatePicker from './components/DatePicker.jsx';
 const App = () => {
   const [date, setDate] = useState();
