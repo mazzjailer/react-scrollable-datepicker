@@ -3,7 +3,7 @@ import {useState} from 'react'
 import YearPicker from './YearPicker.jsx';
 import MonthPicker from './MonthPicker.jsx';
 import DayPicker from './DayPicker.jsx';
-import '../App.css'
+import '../styles/style.css'
 
 const DatePicker = (props) => {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());

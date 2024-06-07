@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState, useEffect, useRef} from 'react'
-import "../App.css"
-import MonthPicker from './MonthPicker';
+import '../styles/style.css'
 
 const YearPicker = (props) => {
   const height = props.height;

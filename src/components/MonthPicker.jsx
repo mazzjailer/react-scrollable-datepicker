@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState, useEffect, useRef} from 'react'
-import "../App.css"
-import DayPicker from './DayPicker';
+import '../styles/style.css'
 
 const MonthPicker = (props) => {
   const height = props.height;
